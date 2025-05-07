@@ -395,7 +395,8 @@
   .chat-popup {
     width: 95%;
     right: 2.5%;
-    bottom: calc(60px + env(safe-area-inset-bottom));
+    top: 20%; /* Move up by setting top edge to 20% from the top */
+    bottom: auto; /* Remove bottom positioning */
     height: 50vh;
     max-height: 400px;
   }
@@ -460,6 +461,6 @@
   }
 
   .chat-popup-input {
-    padding: 8px;
+    padding : 8px;
   }
 }
