@@ -259,14 +259,21 @@ export default function ChatWidget() {
       },
       '*'
     );
-
+    let userIP = '';
+try {
+  const ipRes = await axios.get('https://api64.ipify.org?format=json');
+  userIP = ipRes.data.ip;
+} catch (e) {
+  console.error('IP fetch failed', e);
+}
     // Send tracking data to backend with hardcoded widgetId
     try {
       await axios.post(`http://localhost:3000/track-visitor`, {
-        event: "chat_opened",
-        timestamp: new Date().toISOString(),
-        widgetId,
-      });
+  event: "chat_opened",
+  timestamp: new Date().toISOString(),
+  widgetId,
+  ip: userIP, // <-- send this
+});
     } catch (error) {
       console.error("Failed to track visitor:", error);
     }
