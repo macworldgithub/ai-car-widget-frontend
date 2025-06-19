@@ -269,7 +269,7 @@ try {
 }
     // Send tracking data to backend with hardcoded widgetId
     try {
-      await axios.post(`http://localhost:3000/track-visitor`, {
+      await axios.post(`https://widgetsanalytics.vercel.app/api/track-visitor`, {
   event: "chat_opened",
   timestamp: new Date().toISOString(),
   widgetId,
