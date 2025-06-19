@@ -263,6 +263,7 @@ export default function ChatWidget() {
 try {
   const ipRes = await axios.get('https://api64.ipify.org?format=json');
   userIP = ipRes.data.ip;
+  console.log(userIP)
 } catch (e) {
   console.error('IP fetch failed', e);
 }
