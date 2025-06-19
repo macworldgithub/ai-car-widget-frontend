@@ -137,16 +137,16 @@
 //       )}
 
 //       {/* Chat Popup */}
-//       {isOpen && (
-//         <div className="chat-popup">
-//           <div className="chat-popup-header">
-//             <span>Live Chat</span>
-//             <CloseOutlined
-//               className="chat-popup-close"
-//               onClick={() => setIsOpen(false)}
-//               aria-label="Close chat"
-//             />
-//           </div>
+      // {isOpen && (
+      //   <div className="chat-popup">
+      //     <div className="chat-popup-header">
+      //       <span>Live Chat</span>
+      //       <CloseOutlined
+      //         className="chat-popup-close"
+      //         onClick={() => setIsOpen(false)}
+      //         aria-label="Close chat"
+      //       />
+      //     </div>
 
 //           <div className="chat-popup-messages">
 //             {messages.map((msg, index) => (
@@ -358,7 +358,6 @@ try {
 
       {/* Chat Popup */}
       {isOpen && (
-        <div className="ai-chat-widget-wrapper">
           <div className="chat-popup">
             <div className="chat-popup-header">
               <span>Live Chat</span>
@@ -413,7 +412,6 @@ try {
               />
             </div>
           </div>
-        </div>
       )}
     </div>
   );
