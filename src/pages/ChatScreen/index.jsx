@@ -262,7 +262,7 @@ export default function ChatWidget() {
 
     // Send tracking data to backend with hardcoded widgetId
     try {
-      await axios.post(`${SERVER_URL}/track-visitor`, {
+      await axios.post(`http://localhost:3000/track-visitor`, {
         event: "chat_opened",
         timestamp: new Date().toISOString(),
         widgetId,
